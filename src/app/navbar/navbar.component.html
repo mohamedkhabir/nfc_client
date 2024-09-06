@@ -1,0 +1,27 @@
+<div class="home-pad w-100 color-white" [fxLayout]="'row'" [fxLayoutAlign]="'space-between center'">
+	<a [fxLayout]="'row'" [fxLayoutAlign]="'start center'" fxLayoutGap="1vw" [routerLink]="['/']">
+		<img [src]="'/assets/images/logo.png'" alt="logo" class="w-3vw h-3vw cp" ngClass.lt-md="w-8vw h-8vw" [routerLink]="['/']">
+		<span class="t3 color-white">Scano</span>
+	</a>
+	<div fxHide.lt-md [fxLayout]="'row'" [fxLayoutAlign]="'start center'" fxLayoutGap="3vw">
+		<div class="item cp t0"  *ngFor="let item of navbar"  > <a class="color-white" [routerLink]="['/']" [fragment]="item.route">{{ item.label}}</a> </div>
+</div>
+	<div fxLayout.lt-md="row" fxLayoutAlign="end center" fxLayoutGap.lt-md="1vw">
+		<div class="actions">
+			<button mat-button class="bgcolor3 rounded btn-pad t-1" [routerLink]="['/sign-up']">Sign up</button>
+		</div>
+<!-- <button mat-button class="bgcolor3 rounded btn-pad t-1" [routerLink]="['/sign-up']">Sign up</button> -->
+	<button mat-icon-button fxHide fxShow.lt-md (click)="overlay.hidden=!overlay.hidden"> <mat-icon>menu</mat-icon></button>
+	</div>
+</div>
+<div #overlay hidden class="overlay h-100 w-100 home-pad" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5vw">
+	<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1vw">
+	<button mat-icon-button fxHide fxShow.lt-md (click)="overlay.hidden=!overlay.hidden"> <mat-icon>arrow_back</mat-icon></button>
+	<div class="t5">Menu</div>
+		<span></span>
+	</div>
+
+	<div class="item cp t3"  *ngFor="let item of navbar"   [routerLink]="['/']" [fragment]="item.route" (click)="overlay.hidden=true">
+		{{ item.label}}
+	</div>
+</div>

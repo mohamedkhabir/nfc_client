@@ -1,0 +1,157 @@
+<div class="bgcolor4 t0 w-100 color-white">
+  <app-navbar></app-navbar>
+</div>
+<div *ngIf="step==1" class="step1 home-pad4" ngClass.lt-md="home-resp" fxLayout="column" fxLayoutAlign="center center"
+     fxLayoutGap="2vw">
+  <div class="w-50" ngClass.lt-md="w-75" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw">
+    <div class="title t8 CBold">You're a...</div>
+    <div class="content w-100" fxLayout="column" fxLayoutGap="2vw">
+      <button mat-stroked-button class="w-100 ptb-1vw" [ngClass]="{'br' : action==1}"
+              (click)="action!=1?action=1:action=0"><span class="color-black t1">new user</span></button>
+      <button mat-stroked-button class="w-100 ptb-1vw" [ngClass]="{'br' : action==2}"
+              (click)="action!=2?action=2:action=0"><span class="color-black t1">new company</span></button>
+    </div>
+    <div class="action w-100" fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button class="bgcolor5 color-white rounded btn-pad" [disabled]="action==0" (click)="step=2">Sign up
+      </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="step==2" class="step2 home-pad4" ngClass.lt-md="home-resp" fxLayout="column" fxLayoutAlign="center center"
+     fxLayoutGap="2vw">
+  <div class="w-75" ngClass.lt-md="w-100" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw">
+    <div>
+      <button mat-icon-button class="bgcolor4 color-white" (click)="step=1">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
+    <div class="CBold t8">Create an account</div>
+    <form [formGroup]="formUser" *ngIf="action==1" class="w-100" fxLayout="column" fxLayoutAlign="center center"
+          fxLayoutGap="2vmax">
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="2vmax"
+           [fxFlex]="100" class="w-100">
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>First name</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="firstname">
+        </mat-form-field>
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Last name</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="lastname">
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="2vmax"
+           [fxFlex]="100" class="w-100">
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Placeholder" formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Create password</mat-label>
+          <input type="password" matInput placeholder="Placeholder" formControlName="password">
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="2vmax"
+           [fxFlex]="100" class="w-100">
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Address</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="address">
+        </mat-form-field>
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>City</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="city">
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="2vmax"
+           [fxFlex]="100" class="w-100">
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Phone number</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="phonenumber">
+        </mat-form-field>
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Building</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="building">
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="2vmax"
+           [fxFlex]="100" class="w-100">
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Unit number address</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="unitnumberaddress">
+        </mat-form-field>
+        <mat-form-field appearance="outline" [fxFlex]="48" fxFlex.lt-md="100" class="w-100">
+          <mat-label>Promo code</mat-label>
+          <input type="text" matInput placeholder="Placeholder" formControlName="promocode">
+        </mat-form-field>
+      </div>
+      <div class="action w-100" fxLayout="row" fxLayoutAlign="center center">
+        <button mat-button class="bgcolor5 color-white rounded btn-pad" [disabled]="(!isValidUserForm) || loading"
+                (click)="signUpUser()">{{loading ? 'Loading ...' : 'Next'}}</button>
+      </div>
+    </form>
+    <form [formGroup]="formCompany" *ngIf="action==2" class="w-100" fxLayout="column" fxLayoutAlign="center center"
+          fxLayoutGap="2vmax">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>First name</mat-label>
+        <input type="text" matInput placeholder="Placeholder" formControlName="firstname">
+      </mat-form-field>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input type="email" matInput placeholder="Placeholder" formControlName="lastname">
+      </mat-form-field>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input type="text" matInput placeholder="Placeholder" formControlName="phonenumber">
+      </mat-form-field>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="5" placeholder="Message" formControlName="message"></textarea>
+      </mat-form-field>
+      <div class="action w-100" fxLayout="row" fxLayoutAlign="center center">
+        <button mat-button class="bgcolor5 color-white rounded btn-pad" [disabled]="!isValidCompanyForm || loading"
+                (click)="requestCompany()">{{loading ? 'Loading ...' : 'Send request'}}</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+<div *ngIf="step==3" class="step2 home-pad4" ngClass.lt-md="home-resp" fxLayout="column" fxLayoutAlign="center center"
+     fxLayoutGap="2vw">
+  <div class="w-50" ngClass.lt-md="w-75" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw">
+    <div class="title t8 CBold">Chose your card :</div>
+    <form [formGroup]="checkboxForm" class="content w-100" fxLayout="column" fxLayoutGap="2vw">
+      <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw" class="pl-1vw pr-1vw w-100 ptb-1vw br">
+        <span class="color-black t1">Card 01 :</span>
+        <label>
+        <input type="checkbox" formControlName="card1" />  199 QR
+        </label>
+        <img class="w-100" src="assets/images/1.png">
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw" class="pl-1vw pr-1vw w-100 ptb-1vw br">
+        <span class="color-black t1">Card 02 :</span>
+        <label>
+        <input type="checkbox" formControlName="card2" />  199 QR
+        </label>
+        <img class="w-100" src="assets/images/2.png">
+      </div>
+    </form>
+    <div class="action w-100" fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button class="bgcolor5 color-white rounded btn-pad" (click)="selectcards()">Go To Payment
+      </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="step==4" class="step1 home-pad4" ngClass.lt-md="home-resp" fxLayout="column" fxLayoutAlign="center center"
+     fxLayoutGap="2vw">
+  <div class="w-50" ngClass.lt-md="w-75" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw">
+    <div class="title t8 CBold">Pay with : </div>
+    <div class="content w-100" fxLayout="column" fxLayoutGap="2vw">
+      <button mat-stroked-button class="w-100 ptb-1vw" [ngClass]="{'br' : action==1}"
+              (click)="pay()"><span class="color-black t1">Online Payment</span></button>
+      <button mat-stroked-button class="w-100 ptb-1vw" [ngClass]="{'br' : action==2}"
+              routerLink="/"><span class="color-black t1">Cash</span></button>
+    </div>
+  </div>
+</div>

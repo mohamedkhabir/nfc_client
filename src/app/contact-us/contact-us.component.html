@@ -1,0 +1,31 @@
+<div  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2vw" class="part2 bgcolor-white color-black home-pad2  w-100 pr">
+	<div class="title color1 CBold t5">Get in touch with us</div>
+	<div  class="content t-1 center w-50" ngClass.lt-md="w-100" fxLayout="column" fxLayoutGap="1vmax" fxLayoutGap.lt-md="5vw">
+		<form [formGroup]="form" class="w-100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1vmax" fxLayoutGap.lt-md="5vw">
+		<mat-form-field  class="w-100" appearance="outline">
+			<mat-label>Name</mat-label>
+			<input  type="text" matInput placeholder="Placeholder" formControlName="name">
+		</mat-form-field>
+		<mat-form-field class="w-100" appearance="outline">
+			<mat-label>Email</mat-label>
+			<input type="email" matInput placeholder="Placeholder"  formControlName="email">
+		</mat-form-field>
+			<mat-form-field  class="w-100" appearance="outline">
+				<mat-label>Phone number</mat-label>
+				<input  type="text" matInput placeholder="Placeholder"  formControlName="phonenumber">
+			</mat-form-field>
+			<mat-form-field  class="w-100" appearance="outline">
+				<mat-label>Reason</mat-label>
+				<input  type="text" matInput placeholder="Placeholder"  formControlName="reason">
+			</mat-form-field>
+		<mat-form-field class="w-100" appearance="outline">
+			<mat-label>Message</mat-label>
+			<textarea  matInput rows="5" placeholder="Message"  formControlName="content"></textarea>
+		</mat-form-field>
+		</form>
+		<div class="actions w-100" fxLayout="row" fxLayoutAlign="end center">
+			<button mat-button class="bgcolor3 rounded btn-pad" (click)="contactUs()" type="submit" [disabled]="loading">{{loading?'loading ...' : 'Send'}}</button>
+		</div>
+	</div>
+
+</div>

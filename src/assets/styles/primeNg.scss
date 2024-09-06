@@ -1,0 +1,40 @@
+.p-inputtext {
+  width: 100%;
+  text-align: right;
+}
+
+.pi-angle-double-left:before {
+  content: "\e92e";
+}
+
+.pi-angle-double-right:before {
+  content: "\e92d";
+}
+
+.pi-angle-left:before {
+  content: "\e932";
+}
+
+.pi-angle-right:before {
+  content: "\e931";
+}
+
+.password .p-inputtext {
+  border-radius: 0 6px 6px 0 !important;
+  border-left: 0 !important;
+}
+
+.p-calendar .p-inputtext {
+  text-align: center !important;
+  width: 8vw !important;
+  font-size: inherit !important;
+}
+
+.p-avatar-group p-avatar {
+  margin-left: -1rem !important;
+}
+
+.p-dropdown {
+  width: 100%;
+}
+

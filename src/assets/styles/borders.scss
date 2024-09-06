@@ -1,0 +1,42 @@
+.br50 {
+  border-radius: 50%;
+}
+
+.br {
+  border: 1px solid var(--color1)!important;
+}
+
+.br_color2 {
+  border: 1px solid #000000 !important;
+}
+
+.br1vw {
+  border-radius: 1vw !important;
+}
+
+.brlr1vw {
+  border-radius: 0vw 1vw 1vw 0 !important;
+}
+
+.brrl1vw {
+  border-radius: 1vw 0vw 0vw 1vw !important;
+}
+
+.br20px {
+  border-radius: 20px !important;
+}
+
+.br10px {
+  border-radius: 10px !important;
+}
+
+.br5px {
+  border-radius: 5px !important;
+}
+
+.br2vw {
+  border-radius: 2vw !important;
+}
+.rounded{
+  border-radius: 2rem !important;
+}

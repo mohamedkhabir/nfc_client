@@ -1,0 +1,96 @@
+<div fxLayout="column" >
+<div fxLayout="column" class="part1 bgcolor-black color-white bgi w-100 ">
+<app-navbar></app-navbar>
+	<div fxLayout="row" fxLayout.lt-md="column"  class=" w-100 h-100"  [fxFlex]="100">
+		<div class="pl-10vw" ngClass.lt-md="plr-10vw pt-10vw"  [fxFlex]="50" fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center start"  fxLayoutAlign.lt-md="center center" fxLayoutGap="1vw">
+		<div class="title t15 CBold l1">Tap, Share & Go</div>
+			<div class="t1 justify" ngClass.lt-md="text-center">Welcome to our innovative platform where technology meets networking! We are a cutting-edge online service dedicated to revolutionizing the way you share your business information. Our platform offers a seamless solution for creating and ordering smart business cards powered by NFC technology. With a single tap, you can effortlessly exchange your contact details, social media profiles, and portfolio links, leaving a lasting impression on potential clients and collaborators. Embrace the future of networking with us, as we redefine the way professionals connect and engage in the digital age.</div>
+			<img [src]="'/assets/images/playstore.png'" alt="download" class="w-50 cp" (click)="opengoogleplay()" >
+		</div>
+		<div   [fxFlex]="50" fxFlex.lt-md="100" class="pr" fxLayout="column" fxLayoutAlign="center center">
+			<img  [src]="'/assets/images/media.png'" alt="logo" class=" w-80 hideit pa" >
+			<img [src]="'/assets/images/phone.png'" alt="logo" class="w-100 swing pr top5" >
+		</div>
+	</div>
+</div>
+<div id="who-are-we"  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2vw" class="part2 bgcolor-white color-black home-pad2  w-100 pr" ngClass.lt-md="home-resp">
+	<div class="title color1 CBold t5">Who are we</div>
+	<div class="content t1  center">Welcome to our innovative platform where technology meets networking! We are a cutting-edge online service dedicated to revolutionizing the way you share your business information. Our platform offers a seamless solution for creating and ordering smart business cards powered by NFC technology. With a single tap, you can effortlessly exchange your contact details, social media profiles, and portfolio links, leaving a lasting impression on potential clients and collaborators. Embrace the future of networking with us, as we redefine the way professionals connect and engage in the digital age.</div>
+	<div class="actions">
+		<button mat-button class="bgcolor3 rounded btn-pad" [routerLink]="['/']" [fragment]="'contact-us'">Contact us</button>
+	</div>
+</div>
+<div id="how-it-works" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2vw" fxLayoutGap.lt-md="5vw"  class="part3 bgi bgcolor-black color-white home-pad2  w-100 pr" ngClass.lt-md="home-resp">
+	<div class="title CBold t5 color-white">How it works</div>
+	<div  fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap.lt-md="5vw" >
+	<div class="content t1  center" fxLayout="column"  fxLayoutAlign="center center"  fxLayoutGap.lt-md="5vw">
+		<div fxLayout="row" fxHide.lt-md  fxLayoutAlign="space-between center" [fxFlex]="100">
+			<div class="h-100 translateBottom" fxLayout="column" fxLayoutAlign="space-between center"  [fxFlex]="30">
+				<div fxLayout="column" fxLayoutAlign="center center">
+				<div class="w-3vw h-3vw br50 center bgcolor1" fxLayout="column" fxLayoutAlign="center center" > <span>2</span></div>
+				<div class="color2">Create your profile</div>
+				<div>After your receive your card you can add, edit & enable what you want to share</div>
+				</div>
+			</div>
+			<div  fxLayout="column" fxLayoutAlign="space-between center"  [fxFlex]="30">
+				<div fxLayout="column" fxLayoutAlign="center center">
+					<div class="w-3vw h-3vw br50 center bgcolor1" fxLayout="column" fxLayoutAlign="center center" ><span>1</span></div>
+					<div class="color2">Purchase your card</div>
+					<div>Place your order & get your card/Tag</div>
+				</div>
+			</div>
+			<div class="h-100 translateBottom" fxLayout="column" fxLayoutAlign="space-between center"  [fxFlex]="30">
+				<div fxLayout="column" fxLayoutAlign="center center">
+					<div class="w-3vw h-3vw br50 center bgcolor1" fxLayout="column" fxLayoutAlign="center center" ><span>3</span></div>
+					<div class="color2">Tap, Share & Go</div>
+					<div>it's easy to share what you want with one tap</div>
+				</div>
+			</div>
+		</div>
+		<div fxLayout="column" fxHide fxShow.lt-md fxLayoutAlign="space-between center" fxLayoutGap="3vw" fxLayoutGap.lt-md="5vw" [fxFlex]="100">
+			<div  fxLayout="column" fxLayoutAlign="space-between center">
+				<div fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap.lt-md="2vw">
+					<div class="w-3vw h-3vw br50 center bgcolor1 t3" ngClass.lt-md="w-8vw h-8vw" fxLayout="column" fxLayoutAlign="center center" ><span>1</span></div>
+					<div class="color2" ngClass.lt-md="t3">Purchase your card</div>
+					<div  ngClass.lt-md="t1">Place your order & get your card/Tag</div>
+				</div>
+			</div>
+			<div class="h-100" fxLayout="column" fxLayoutAlign="space-between center" >
+				<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap.lt-md="2vw">
+				<div class="w-3vw h-3vw br50 center bgcolor1 t3" ngClass.lt-md="w-8vw h-8vw" fxLayout="column" fxLayoutAlign="center center" > <span>2</span></div>
+				<div class="color2"  ngClass.lt-md="t3">Create your profile</div>
+				<div  ngClass.lt-md="t1">After your receive your card you can add, edit & enable what you want to share</div>
+				</div>
+			</div>
+			<div class="h-100" fxLayout="column" fxLayoutAlign="space-between center">
+				<div fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap.lt-md="2vw">
+					<div class="w-3vw h-3vw br50 center bgcolor1 t3"  ngClass.lt-md="w-8vw h-8vw" fxLayout="column" fxLayoutAlign="center center" ><span>3</span></div>
+					<div class="color2"  ngClass.lt-md="t3">Tap, Share & Go</div>
+					<div  ngClass.lt-md="t1">it's easy to share what you want with one tap</div>
+				</div>
+			</div>
+		</div>
+		 <img (click)="opengoogleplay()"  [src]="'/assets/images/download.png'" alt="logo" class=" w-75" >
+	</div>
+	<div class="actions translateTop" fxHide.lt-md>
+		<button (click)="opengoogleplay()" mat-button class="bgcolor3 rounded btn-pad">Download</button>
+	</div>
+		<div class="actions " fxHide fxShow.lt-md>
+		<button (click)="opengoogleplay()" mat-button class="bgcolor3 rounded btn-pad">Download</button>
+	</div>
+	</div>
+</div>
+<div id="buy" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutGap="2vw" class="part4 bgi bgcolor-black color-white  w-100 pr plr-5vw" [fxFlex]="100" ngClass.lt-md="home-resp">
+	<div class="left" fxFlex.lt-md="100" fxLayout.lt-md="row" fxLayoutAlign.lt-md="center center" [fxFlex]="50">
+		<img  [src]="'/assets/images/cards.png'" alt="logo" class="cards " ngClass.lt-md="right-auto w-100">
+	</div>
+	<div class="right ptb-5vw" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="2vw" fxFlex.lt-md="100" fxLayoutAlign.lt-md="center center" [fxFlex]="50">
+		<div class="title CBold t5 color-white">Get your business card</div>
+		<div class="content t1" ngClass.lt-md="center">Elevate your networking game with our revolutionary smart business cards! Imagine the power of sharing your contact information and professional portfolio with a single tap. Say goodbye to fumbling for paper cards or manual data entry – with our smart business cards, you'll effortlessly exchange information and stand out in a tech-savvy world. Join us in shaping the future of networking and unlock a new level of convenience and sophistication for your business interactions. Experience the future today!</div>
+		<div class="action"><button mat-button class="bgcolor3 rounded btn-pad" (click)="opengoogleplay()">Buy Now</button></div>
+	</div>
+</div>
+<div id="contact-us" ><app-contact-us></app-contact-us></div>
+<app-footer></app-footer>
+
+</div>

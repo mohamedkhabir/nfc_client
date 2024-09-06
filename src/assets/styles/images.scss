@@ -1,0 +1,32 @@
+.bgi {
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover  !important;
+  -o-background-size: cover  !important;
+  background-size: cover  !important;
+  background-repeat: no-repeat  !important;
+  background-position-x: center  !important;
+  background-position-y: center  !important;
+}.bgi-contain {
+   -webkit-background-size: contain;
+   -moz-background-size: contain;
+   -o-background-size: contain;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center;
+ }.bgi-auto {
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+  }
+  img{
+    object-fit: contain;
+  }
+  .bs{
+    border-radius: 12rem 6px 12rem 6px;
+    box-shadow: -10px 10px var(--color3);
+  }

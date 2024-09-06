@@ -1,0 +1,54 @@
+:root{
+  --color1: #7425DF ;
+  --color2: #98FFC4 ;
+  --color3: rgb(0,73,255);
+  --color4: #04025C;
+  --color5: #ff5f0c;
+  --mdc-theme-primary : #7425DF;
+  --mdc-shape-small : 10px;
+  --mdc-icon-button-state-layer-size : 24px;
+  --bs-body-font-size: 14px;
+  --mdc-elevated-card-container-shape : 10px ;
+  --mat-mdc-form-field-label-transform: translateY( -29.75px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+}
+.color1 {
+  color: var(--color1) !important;
+}
+.color2 {
+  color: var(--color2) !important;
+}
+.color3 {
+  color: var(--color3) !important;
+}
+.bgcolor1 {
+  background-color: var(--color1) !important;
+}
+.bgcolor2 {
+  background-color: var(--color2) !important;
+}
+.bgcolor3 {
+  background: var(--color3) !important;
+  background: linear-gradient(60deg, rgba(0,73,255,1) 0%, rgba(128,16,255,1) 100%) !important;
+  color: white !important;
+}
+.bgcolor0 {
+  background-color: transparent !important;
+}
+.bgcolor4 {
+  background-color: var(--color4) !important;
+}
+.bgcolor5 {
+  background-color: var(--color5) !important;
+}
+.color-white{
+  color: white !important;
+}
+.color-black{
+  color: black !important;
+}
+.bgcolor-white{
+  background-color: white;
+}
+.bgcolor-black{
+  background-color: black;
+}

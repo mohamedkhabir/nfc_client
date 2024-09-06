@@ -1,0 +1,14 @@
+.active_link_light{
+  border-bottom:2px solid white;
+  font-family : 'Tajawal-Black';
+
+}
+.active_link_dark{
+  border-bottom:2px solid black ;
+  font-family : 'Tajawal-Black';
+}
+.overlay {
+  position: absolute;
+ z-index: 1000;
+  background-color: var(--color1);
+}
